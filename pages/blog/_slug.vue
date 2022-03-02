@@ -16,10 +16,10 @@
   <article>
     <nuxt-content :document="article" />
     
-    <h1>{{ article.title }}</h1>
+    <!-- <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
     <img :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p> -->
   </article>
   
   
@@ -28,8 +28,8 @@
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const article = await $content('articles', params.slug).fetch()
-        
+    //   const article = await $content('articles', params.slug).fetch()
+        const article = []
       return { article }
     },
     methods: {
